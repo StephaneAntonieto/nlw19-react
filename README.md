@@ -1,4 +1,4 @@
-# NLW19 - Event Registration and Referral System
+# NLW19 - Reactjs - Nextjs 
 
 This project was developed during NLW19 by Rocketseat. It is an application that allows event participation registration and referral of other people to the same event. Referrals are tracked and displayed in a ranking system.
 
