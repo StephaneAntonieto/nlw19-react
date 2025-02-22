@@ -1,34 +1,86 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# NLW19 - Event Registration and Referral System
 
-## Getting Started
+This project was developed during NLW19 by Rocketseat. It is an application that allows event participation registration and referral of other people to the same event. Referrals are tracked and displayed in a ranking system.
 
-First, run the development server:
+## Features
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+- Event participation registration
+- Generation of unique invitation links for each participant
+- Tracking of accesses and registrations through invitation links
+- Display of ranking with the best referrals
+
+## Technologies Used
+
+- **Frontend:**
+  - React
+  - Next.js
+  - Tailwind CSS
+  - TypeScript
+
+- **Backend:**
+  - Fastify
+  - PostgreSQL
+  - Redis
+  - Drizzle ORM
+  - TypeScript
+
+## Project Structure
+
+### Frontend
+
+The frontend of the application is located in the `src/app` folder. It is responsible for rendering the pages and components of the application, as well as making requests to the backend.
+
+### Backend
+
+The backend of the application is located in the `api/src` folder. It is responsible for managing routes, connecting to the database and Redis, and processing business logic.
+
+### ScreenShots
+
+| ![Imagem 1](/screenshot/RegisterScreen.svg) | ![Imagem 2](/screenshot/RankingScreen.svg) |
+|--------------------------|--------------------------|
+
+## How to Run the Project
+
+### Prerequisites
+
+- Node.js
+- Docker
+
+### Steps to Run
+
+1. Clone the repository:
+```sh
+    git clone https://github.com/stephaneantonieto/nlw19.git
+    cd nlw19
 ```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+2. Install frontend dependencies:
+```sh
+    cd web
+    npm install
+```
+3. Install backend dependencies:
+```sh
+    cd web/api
+    npm install
+```
+4. Configure environment variables:
+   - Create a `.env` file in the `api` folder with the following variables:
+```sh
+    PORT=3333
+    DATABASE_URL=your_postgresql_url
+    REDIS_URL=your_redis_url
+    API_URL=http://localhost:3333
+    WEB_URL=http://localhost:3000
+```
+5. Run backend services:
+```sh
+    cd web/api
+    docker-compose up
+    npm run dev
+```
+6. Run frontend:
+```sh
+    cd web
+    npm run dev
+```
+7. Access the application at `http://localhost:3000`
