@@ -2,6 +2,11 @@
 
 This project was developed during NLW19 by Rocketseat. It is an application that allows event participation registration and referral of other people to the same event. Referrals are tracked and displayed in a ranking system.
 
+### ScreenShots
+
+| ![Imagem 1](/screenshot/RegisterScreen.svg) | ![Imagem 2](/screenshot/RankingScreen.svg) |
+|--------------------------|--------------------------|
+
 ## Features
 
 - Event participation registration
@@ -33,11 +38,6 @@ The frontend of the application is located in the `src/app` folder. It is respon
 ### Backend
 
 The backend of the application is located in the `api/src` folder. It is responsible for managing routes, connecting to the database and Redis, and processing business logic.
-
-### ScreenShots
-
-| ![Imagem 1](/screenshot/RegisterScreen.svg) | ![Imagem 2](/screenshot/RankingScreen.svg) |
-|--------------------------|--------------------------|
 
 ## How to Run the Project
 
