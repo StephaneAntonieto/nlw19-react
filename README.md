@@ -50,7 +50,7 @@ The backend of the application is located in the `api/src` folder. It is respons
 
 1. Clone the repository:
 ```sh
-    git clone https://github.com/stephaneantonieto/nlw19.git
+    gh repo clone StephaneAntonieto/nlw19-react
     cd nlw19
 ```
 2. Install frontend dependencies:
